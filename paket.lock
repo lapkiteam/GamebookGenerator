@@ -1,0 +1,25 @@
+
+
+GROUP Core
+STORAGE: NONE
+STRATEGY: MIN
+RESTRICTION: == net6.0
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    FSharp.Core (6.0)
+  remote: https://gitlab.com/api/v4/projects/28574921/packages/nuget/index.json
+    FSharpMyExt (2.0.0-prerelease.10)
+
+GROUP Tests
+STORAGE: NONE
+STRATEGY: MIN
+RESTRICTION: == net6.0
+NUGET
+  remote: https://api.nuget.org/v3/index.json
+    Expecto (9.0.4)
+      FSharp.Core (>= 4.6)
+      Mono.Cecil (>= 0.11.3)
+    FSharp.Core (6.0)
+    Mono.Cecil (0.11.3)
+  remote: https://gitlab.com/api/v4/projects/28574921/packages/nuget/index.json
+    FSharpMyExt (2.0.0-prerelease.10)
