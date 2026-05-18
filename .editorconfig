@@ -12,3 +12,6 @@ insert_final_newline = true
 
 [*.{fs,fsx}]
 indent_size = 4
+
+[paket.references]
+indent_size = 2
