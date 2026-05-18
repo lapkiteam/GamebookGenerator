@@ -6,7 +6,8 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Lib.fs" />
+    <Compile Include="Ast.fs" />
+    <Compile Include="Parser/Content.fs" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

@@ -1,4 +1,4 @@
-// module GamebookGenerator.Core.Ast
+namespace GamebookGenerator.Core.Ast
 
 [<RequireQualifiedAccess>]
 type Content =

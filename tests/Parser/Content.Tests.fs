@@ -1,4 +1,4 @@
-module GamebookGenerator.Lib.Tests
+module GamebookGenerator.Core.Parser.Content.Tests
 open Expecto
 
 [<Tests>]
