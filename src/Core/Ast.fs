@@ -3,7 +3,7 @@ namespace GamebookGenerator.Core.Ast
 [<RequireQualifiedAccess>]
 type Content =
     | Text of string
-    | Link of string
+    | Link of int
 
 type Paragraph = {
     Title: string

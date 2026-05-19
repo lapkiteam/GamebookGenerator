@@ -1,12 +1,32 @@
 module GamebookGenerator.Core.Parser.Content.Tests
 open Expecto
+open FsharpMyExtension.Serialization.Deserializers.FParsec
+
+open GamebookGenerator.Core.Ast
 
 [<Tests>]
-let ``Lib.hello`` =
-    testList "Lib.hello" [
-        testCase "world" <| fun () ->
+let ``Parser.Content.ptext`` =
+    testList "Parser.Content.ptext" [
+        testCase "multiline text" <| fun () ->
             Expect.equal
-                (hello "World")
-                "Hello, World!"
+                (runResult ptext <| String.concat "\n" [
+                    "Ты стоишь на развилке."
+                    "Пойти налево — $1"
+                    "Пойти направо — $2"
+                ])
+                (Ok <| String.concat "\n" [
+                    "Ты стоишь на развилке."
+                    "Пойти налево — "
+                ])
+                ""
+    ]
+
+[<Tests>]
+let ``Parser.Content.plink`` =
+    testList "Parser.Content.plink" [
+        testCase "link" <| fun () ->
+            Expect.equal
+                (runResult plink "$1")
+                (Ok 1)
                 ""
     ]
