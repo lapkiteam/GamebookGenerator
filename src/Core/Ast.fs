@@ -1,13 +1,13 @@
 namespace GamebookGenerator.Core.Ast
 
 [<RequireQualifiedAccess>]
-type Content =
+type Inline =
     | Text of string
     | Link of int
 
 type Paragraph = {
     Title: string
-    Content: Content
+    Content: Inline list
 }
 
 type Document = {

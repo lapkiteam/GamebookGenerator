@@ -1,4 +1,4 @@
-module GamebookGenerator.Core.Parser.Content.Tests
+module GamebookGenerator.Core.Parser.Inline.Tests
 open Expecto
 open FsharpMyExtension.Serialization.Deserializers.FParsec
 
@@ -14,10 +14,14 @@ let ``Parser.Content.ptext`` =
                     "Пойти налево — $1"
                     "Пойти направо — $2"
                 ])
-                (Ok <| String.concat "\n" [
-                    "Ты стоишь на развилке."
-                    "Пойти налево — "
-                ])
+                (Ok "Ты стоишь на развилке.")
+                ""
+        testCase "with $" <| fun () ->
+            Expect.equal
+                (runResult ptext
+                    "Пойти налево — $1"
+                )
+                (Ok "Пойти налево — ")
                 ""
     ]
 
