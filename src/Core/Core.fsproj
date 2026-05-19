@@ -7,8 +7,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Ast.fs" />
+    <Compile Include="Helpers.fs" />
     <Compile Include="Parser/Common.fs" />
     <Compile Include="Parser/Inline.fs" />
+    <Compile Include="Parser/Line.fs" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

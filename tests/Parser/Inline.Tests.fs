@@ -9,7 +9,7 @@ let ``Parser.Content.ptext`` =
     testList "Parser.Content.ptext" [
         testCase "multiline text" <| fun () ->
             Expect.equal
-                (runResult ptext <| String.concat "\n" [
+                (runResult ptext <| String.concat System.Environment.NewLine [
                     "Ты стоишь на развилке."
                     "Пойти налево — $1"
                     "Пойти направо — $2"

@@ -5,6 +5,8 @@ type Inline =
     | Text of string
     | Link of int
 
+type Line = Inline list
+
 type Paragraph = {
     Title: string
     Content: Inline list
