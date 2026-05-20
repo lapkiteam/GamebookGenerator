@@ -5,7 +5,7 @@ open FParsec
 open GamebookGenerator.Core.Ast
 open GamebookGenerator.Core.Parser.Common
 
-let plink: _ Parser =
+let plink: ParagraphId Parser =
     pstring "$" >>. pint32
 
 let ptext: _ Parser =

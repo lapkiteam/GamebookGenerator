@@ -28,8 +28,14 @@ let ``Parser.Line.parser`` =
                     "Error in Ln: 1 Col: 1"
                     "$24"
                     "^"
+                    "Expecting: newline"
                     "Unexpected: '$'"
                     ""
                 ])
+                ""
+        testCase "empty"  <| fun () ->
+            Expect.equal
+                (runResult parser "\n")
+                (Ok [text ""])
                 ""
     ]

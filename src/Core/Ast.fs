@@ -1,15 +1,18 @@
 namespace GamebookGenerator.Core.Ast
 
+type ParagraphId = int
+
 [<RequireQualifiedAccess>]
 type Inline =
     | Text of string
-    | Link of int
+    | Link of ParagraphId
 
 type Line = Inline list
 
 type Paragraph = {
+    Id: ParagraphId
     Title: string
-    Content: Inline list
+    Content: Line list
 }
 
 type Document = {

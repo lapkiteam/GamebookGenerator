@@ -11,6 +11,7 @@
     <Compile Include="Parser/Common.fs" />
     <Compile Include="Parser/Inline.fs" />
     <Compile Include="Parser/Line.fs" />
+    <Compile Include="Parser/Paragraph.fs" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

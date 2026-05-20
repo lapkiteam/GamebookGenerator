@@ -7,6 +7,11 @@ open GamebookGenerator.Core.Ast
 open GamebookGenerator.Core.Parser
 open GamebookGenerator.Core.Parser.Common
 
+let pemptyText: Line Parser =
+    followedByNewline >>% [Inline.Text ""]
+
 let parser: Line Parser =
-    notFollowedByString "$"
-    >>. many1 Inline.parser
+    choice [
+        notFollowedByString "$" >>. many1 Inline.parser
+        pemptyText
+    ]
