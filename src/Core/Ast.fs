@@ -16,6 +16,6 @@ type Paragraph = {
 }
 
 type Document = {
-    Intro: string
+    Intro: Line list
     Paragraphs: Paragraph list
 }
