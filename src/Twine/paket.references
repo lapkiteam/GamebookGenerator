@@ -1,0 +1,4 @@
+group Twine
+  FSharp.Core
+  FSharpMyExt
+  Twee.FSharp
