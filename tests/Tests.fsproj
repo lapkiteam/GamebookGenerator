@@ -14,6 +14,7 @@
     <Compile Include="Parser/Paragraph.Tests.fs" />
     <Compile Include="Twine/SugarCube/Printer/Link.Tests.fs" />
     <Compile Include="Twine/SugarCube/Printer/Line.Tests.fs" />
+    <Compile Include="Twine/Document.Tests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
