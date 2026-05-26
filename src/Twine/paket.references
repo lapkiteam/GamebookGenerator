@@ -1,5 +1,4 @@
-group Tests
+group Twine
   FSharp.Core
-  Expecto
   FSharpMyExt
   Twee.FSharp

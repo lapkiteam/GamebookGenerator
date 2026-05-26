@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageID>GamebookGenerator.Twine</PackageID>
+    <AssemblyName>GamebookGenerator.Twine</AssemblyName>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SugarCube\Ast.fs" />
+    <Compile Include="SugarCube\Printer\Link.fs" />
+    <Compile Include="SugarCube\Printer\Inline.fs" />
+    <Compile Include="SugarCube\Printer\Line.fs" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
