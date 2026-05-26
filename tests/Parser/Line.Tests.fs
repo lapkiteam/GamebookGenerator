@@ -11,8 +11,8 @@ let ``Parser.Line.parser`` =
         testCase "multiline text" <| fun () ->
             Expect.equal
                 (runResult parser <| String.concat System.Environment.NewLine [
-                    "Пойти налево — $1, Пойти направо — $2"
-                    "Перекусить — $3"
+                    "Пойти налево — §1, Пойти направо — §2"
+                    "Перекусить — §3"
                 ])
                 (Ok [
                     text "Пойти налево — "
@@ -21,15 +21,15 @@ let ``Parser.Line.parser`` =
                     link 2
                 ])
                 ""
-        testCase "$24" <| fun () ->
+        testCase "§24" <| fun () ->
             Expect.equal
-                (runResult parser "$24")
+                (runResult parser "§24")
                 (Error <| String.concat System.Environment.NewLine [
                     "Error in Ln: 1 Col: 1"
-                    "$24"
+                    "§24"
                     "^"
                     "Expecting: newline"
-                    "Unexpected: '$'"
+                    "Unexpected: '§'"
                     ""
                 ])
                 ""

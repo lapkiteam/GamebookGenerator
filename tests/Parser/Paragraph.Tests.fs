@@ -10,7 +10,7 @@ let ``Parser.Line.pheader`` =
         testCase "base" <| fun () ->
             Expect.equal
                 (runResult pheader
-                    "$27.  Параграф такой-то")
+                    "§27.  Параграф такой-то")
                 (Ok (27, "Параграф такой-то"))
                 ""
     ]
@@ -25,7 +25,7 @@ let ``Parser.Line.plines`` =
                     ""
                     " Строка вторая"
                     ""
-                    "$10. Новый параграф"
+                    "§10. Новый параграф"
                 ])
                 (Ok [
                     [text "Первая строка"]

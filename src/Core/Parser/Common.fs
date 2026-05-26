@@ -5,3 +5,5 @@ type 'a Parser = Parser<'a, unit>
 
 let inlineSpaces: _ Parser =
     skipManySatisfy (isAnyOf " \t")
+
+let paragraphChar = "§"
