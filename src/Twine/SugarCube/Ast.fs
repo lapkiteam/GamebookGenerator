@@ -3,7 +3,7 @@ open Twee.FSharp
 
 type Link = {
     Text: string
-    PassageName: PassageName
+    PassageName: PassageName option
 }
 
 [<RequireQualifiedAccess>]

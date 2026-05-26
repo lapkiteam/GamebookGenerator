@@ -71,6 +71,9 @@ NUGET
       Newtonsoft.Json.Bson (>= 1.0.2)
       System.Drawing.Common (>= 4.7)
       TextCopy (>= 4.2)
+    Twee.FSharp (0.4.0)
+      FSharp.Core (>= 6.0)
+      FSharpMyExt (>= 2.0.0-prerelease.9)
 
 GROUP Twine
 STORAGE: NONE

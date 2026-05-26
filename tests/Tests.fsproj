@@ -5,13 +5,15 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\src\Core\Core.fsproj" />
+    <ProjectReference Include="..\src\Twine\Twine.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Parser/Inline.Tests.fs" />
     <Compile Include="Parser/Line.Tests.fs" />
     <Compile Include="Parser/Paragraph.Tests.fs" />
+    <Compile Include="Twine/SugarCube/Printer/Link.Tests.fs" />
     <Compile Include="Program.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\src\Core\Core.fsproj" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
