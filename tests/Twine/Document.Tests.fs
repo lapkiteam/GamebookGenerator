@@ -26,7 +26,9 @@ let ``Twine.Document.toTwine`` =
                             Tags = None
                             Metadata = None
                         }
-                        Body = []
+                        Body = [
+                            "Начать — [[$1|1]]."
+                        ]
                     }
                     {
                         Header = {
