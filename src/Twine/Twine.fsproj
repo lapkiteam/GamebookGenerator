@@ -14,6 +14,10 @@
     <Compile Include="SugarCube\Printer\Link.fs" />
     <Compile Include="SugarCube\Printer\Inline.fs" />
     <Compile Include="SugarCube\Printer\Line.fs" />
+    <Compile Include="Inline.fs" />
+    <Compile Include="Line.fs" />
+    <Compile Include="Paragraph.fs" />
+    <Compile Include="Document.fs" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
