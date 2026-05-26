@@ -13,7 +13,7 @@ let introToTwine (startParagraphId: ParagraphId option) (intro: list<Line>) =
     }
     let body: Twee.FSharp.PassageBody =
         [
-            yield! intro |> List.map Line.toTwine
+            yield! Paragraph.linesToTwine intro
 
             match startParagraphId with
             | Some startParagraphId ->

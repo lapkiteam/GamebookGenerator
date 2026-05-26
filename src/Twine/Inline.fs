@@ -8,7 +8,7 @@ let toTwine (inline': Inline) =
     match inline' with
     | Inline.Link paragraphId ->
         SugarCube.FSharp.Inline.Link {
-            Text = sprintf "$%d" paragraphId
+            Text = "turnto" // todo: make option to `sprintf "$%d" paragraphId`
             PassageName = string paragraphId |> Some
         }
     | Inline.Text text ->

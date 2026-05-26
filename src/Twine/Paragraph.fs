@@ -4,6 +4,13 @@ module GamebookGenerator.Twine.Paragraph
 open GamebookGenerator.Core.Ast
 open Twine
 
+let linesToTwine (lines: Line list) =
+    lines
+    |> List.collect (
+        Line.toTwine
+        >> fun x -> [x; ""]
+    )
+
 let toTwine (paragraph: Paragraph) =
     let header: Twee.FSharp.PassageHeader = {
         Name = string paragraph.Id
@@ -12,8 +19,8 @@ let toTwine (paragraph: Paragraph) =
     }
     let body: Twee.FSharp.PassageBody =
         [
-            paragraph.Title
-            yield! paragraph.Content |> List.map Line.toTwine
+            // paragraph.Title
+            yield! linesToTwine paragraph.Content
         ]
     let passage: Twee.FSharp.Passage = {
         Header = header
