@@ -10,3 +10,5 @@ type Link = {
 type Inline =
     | Text of string
     | Link of Link
+
+type Line = Inline list
