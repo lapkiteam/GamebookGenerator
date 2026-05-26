@@ -1,6 +1,6 @@
 module GamebookGenerator.Twine.Document.Tests
 open Expecto
-open GamebookGenerator.Core.Ast.Helpers
+open GamebookGenerator.Core.Helpers
 
 [<Tests>]
 let ``Twine.Document.toTwine`` =

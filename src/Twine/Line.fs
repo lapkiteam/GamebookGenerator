@@ -1,7 +1,7 @@
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 [<RequireQualifiedAccess>]
 module GamebookGenerator.Twine.Line
-open GamebookGenerator.Core.Ast
+open GamebookGenerator.Core
 open Twine
 
 let toTwine (line: Line) =

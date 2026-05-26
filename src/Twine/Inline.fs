@@ -1,7 +1,7 @@
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 [<RequireQualifiedAccess>]
 module GamebookGenerator.Twine.Inline
-open GamebookGenerator.Core.Ast
+open GamebookGenerator.Core
 open GamebookGenerator.Core.Parser.Common
 open Twine
 

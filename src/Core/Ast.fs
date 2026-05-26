@@ -1,4 +1,4 @@
-namespace GamebookGenerator.Core.Ast
+namespace GamebookGenerator.Core
 
 type ParagraphId = int
 

@@ -2,7 +2,7 @@
 [<RequireQualifiedAccess>]
 module GamebookGenerator.Core.Parser.Inline
 open FParsec
-open GamebookGenerator.Core.Ast
+open GamebookGenerator.Core
 open GamebookGenerator.Core.Parser.Common
 
 let plink: ParagraphId Parser =

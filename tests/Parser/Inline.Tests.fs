@@ -2,8 +2,6 @@ module GamebookGenerator.Core.Parser.Inline.Tests
 open Expecto
 open FsharpMyExtension.Serialization.Deserializers.FParsec
 
-open GamebookGenerator.Core.Ast
-
 [<Tests>]
 let ``Parser.Content.ptext`` =
     testList "Parser.Content.ptext" [

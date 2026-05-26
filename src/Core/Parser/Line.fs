@@ -3,7 +3,7 @@
 module GamebookGenerator.Core.Parser.Line
 open FParsec
 
-open GamebookGenerator.Core.Ast
+open GamebookGenerator.Core
 open GamebookGenerator.Core.Parser
 open GamebookGenerator.Core.Parser.Common
 

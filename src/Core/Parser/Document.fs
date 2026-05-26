@@ -4,7 +4,7 @@ module GamebookGenerator.Core.Parser.Document
 open FParsec
 open FsharpMyExtension.Serialization.Deserializers.FParsec
 
-open GamebookGenerator.Core.Ast
+open GamebookGenerator.Core
 open GamebookGenerator.Core.Parser
 open GamebookGenerator.Core.Parser.Common
 

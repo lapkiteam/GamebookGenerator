@@ -2,7 +2,7 @@ module GamebookGenerator.Core.Parser.Paragraph.Tests
 open Expecto
 open FsharpMyExtension.Serialization.Deserializers.FParsec
 
-open GamebookGenerator.Core.Ast.Helpers
+open GamebookGenerator.Core.Helpers
 
 [<Tests>]
 let ``Parser.Line.pheader`` =

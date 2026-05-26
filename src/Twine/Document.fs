@@ -1,9 +1,8 @@
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 [<RequireQualifiedAccess>]
 module GamebookGenerator.Twine.Document
-open GamebookGenerator.Core.Ast
-open Twine
-open GamebookGenerator.Core.Ast.Helpers
+open GamebookGenerator.Core
+open GamebookGenerator.Core.Helpers
 
 let introToTwine (startParagraphId: ParagraphId option) (intro: list<Line>) =
     let header: Twee.FSharp.PassageHeader = {
