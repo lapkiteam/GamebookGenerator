@@ -9,7 +9,8 @@
     <ProjectReference Include="..\Core\Core.fsproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library.fs" />
+    <Compile Include="SugarCube\Ast.fs" />
+    <Compile Include="SugarCube\Printer\Inline.fs" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
