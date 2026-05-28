@@ -2,8 +2,11 @@
 [<RequireQualifiedAccess>]
 module GamebookGenerator.Twine.ParagraphBody
 open GamebookGenerator.Core
-open Twine
+open Twine.SugarCube.FSharp
+open Twine.SugarCube.FSharp.Helpers
 
-let toTwine (paragraphBody: ParagraphBody) : SugarCube.FSharp.PassageBody =
-    paragraphBody
-    |> List.map Line.toTwine
+let toTwine paragraphTitle (paragraphBody: ParagraphBody) : PassageBody =
+    [
+        line [text paragraphTitle]
+        yield! paragraphBody |> List.map Line.toTwine
+    ]
