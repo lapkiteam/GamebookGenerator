@@ -2,19 +2,23 @@
 [<RequireQualifiedAccess>]
 module GamebookGenerator.Twine.Paragraph
 open GamebookGenerator.Core
+open Twine.Twee.FSharp
+open Twine.SugarCube.FSharp
+open Twine.SugarCube.FSharp.Helpers
 
 let toTwine (paragraph: Paragraph) =
-    let header: Twine.Twee.FSharp.PassageHeader = {
+    let header: PassageHeader = {
         Name = string paragraph.Id
         Tags = None
         Metadata = None
     }
-    let body: Twine.Twee.FSharp.PassageBody =
+    let body: PassageBody =
         [
-            paragraph.Title
+            line [text paragraph.Title]
+
             yield! paragraph.Content |> List.map Line.toTwine
         ]
-    let passage: Twine.Twee.FSharp.Passage<_> = {
+    let passage: Passage<_> = {
         Header = header
         Body = body
     }

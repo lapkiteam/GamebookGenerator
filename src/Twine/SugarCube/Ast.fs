@@ -12,3 +12,5 @@ type Inline =
     | Link of Link
 
 type Line = Inline list
+
+type PassageBody = Line list

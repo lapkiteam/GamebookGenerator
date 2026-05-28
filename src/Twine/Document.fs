@@ -10,7 +10,7 @@ let introToTwine (startParagraphId: ParagraphId option) (intro: list<Line>) =
         Tags = None
         Metadata = None
     }
-    let body: Twine.Twee.FSharp.PassageBody =
+    let body: Twine.SugarCube.FSharp.PassageBody =
         [
             yield! intro |> List.map Line.toTwine
 
