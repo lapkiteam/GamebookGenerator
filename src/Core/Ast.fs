@@ -9,13 +9,15 @@ type Inline =
 
 type Line = Inline list
 
+type ParagraphBody = Line list
+
 type Paragraph = {
     Id: ParagraphId
     Title: string
-    Content: Line list
+    Content: ParagraphBody
 }
 
 type Document = {
-    Intro: Line list
+    Intro: ParagraphBody
     Paragraphs: Paragraph list
 }
