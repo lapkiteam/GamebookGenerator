@@ -1,5 +1,5 @@
 namespace Twine.SugarCube.FSharp
-open Twee.FSharp
+open Twine.Twee.FSharp
 
 type Link = {
     Text: string
