@@ -5,8 +5,12 @@ open GamebookGenerator.Core
 open Twine.SugarCube.FSharp
 open Twine.SugarCube.FSharp.Helpers
 
-let toTwine paragraphTitle (paragraphBody: ParagraphBody) : PassageBody =
+let toTwine paragraphTitleOption (paragraphBody: ParagraphBody) : PassageBody =
     [
-        line [text paragraphTitle]
+        match paragraphTitleOption with
+        | Some paragraphTitle ->
+            line [text paragraphTitle]
+        | None -> ()
+
         yield! paragraphBody |> List.map Line.toTwine
     ]

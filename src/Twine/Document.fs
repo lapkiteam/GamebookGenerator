@@ -4,7 +4,7 @@ module GamebookGenerator.Twine.Document
 open GamebookGenerator.Core
 open GamebookGenerator.Core.Helpers
 
-let introToTwine (startParagraphId: ParagraphId option) (intro: list<Line>) =
+let introToTwine (startParagraphId: ParagraphId option) (intro: ParagraphBody) =
     let header: Twine.Twee.FSharp.PassageHeader = {
         Name = "Start"
         Tags = None
@@ -12,7 +12,7 @@ let introToTwine (startParagraphId: ParagraphId option) (intro: list<Line>) =
     }
     let body: Twine.SugarCube.FSharp.PassageBody =
         [
-            yield! intro |> List.map Line.toTwine
+            yield! ParagraphBody.toTwine None intro
 
             match startParagraphId with
             | Some startParagraphId ->

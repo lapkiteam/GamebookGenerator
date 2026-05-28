@@ -13,6 +13,8 @@ let toTwine (paragraph: Paragraph) =
     let passage: Passage<_> = {
         Header = header
         Body =
-            ParagraphBody.toTwine paragraph.Title paragraph.Content
+            ParagraphBody.toTwine
+                (Some paragraph.Title)
+                paragraph.Content
     }
     passage
