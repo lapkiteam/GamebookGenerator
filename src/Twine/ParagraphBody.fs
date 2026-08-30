@@ -16,8 +16,8 @@ let toTwine paragraphTitleOption (paragraphBody: ParagraphBody) : PassageBody =
 
         yield!
             paragraphBody
-            |> List.collect (fun line ->
+            |> List.map (fun line ->
                 let line = Line.toTwine line
-                [line] @ [[]]
+                line @ [text "<br>"]
             )
     ]
