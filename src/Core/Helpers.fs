@@ -1,4 +1,4 @@
-module GamebookGenerator.Core.Ast.Helpers
+module GamebookGenerator.Core.Helpers
 
 let text = Inline.Text
 let link = Inline.Link

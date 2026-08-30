@@ -3,7 +3,7 @@
 module GamebookGenerator.Core.Parser.Line
 open FParsec
 
-open GamebookGenerator.Core.Ast
+open GamebookGenerator.Core
 open GamebookGenerator.Core.Parser
 open GamebookGenerator.Core.Parser.Common
 
@@ -12,6 +12,6 @@ let pemptyText: Line Parser =
 
 let parser: Line Parser =
     choice [
-        notFollowedByString "$" >>. many1 Inline.parser
+        notFollowedByString paragraphChar >>. many1 Inline.parser
         pemptyText
     ]

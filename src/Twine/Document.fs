@@ -1,19 +1,18 @@
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 [<RequireQualifiedAccess>]
 module GamebookGenerator.Twine.Document
-open GamebookGenerator.Core.Ast
-open Twine
-open GamebookGenerator.Core.Ast.Helpers
+open GamebookGenerator.Core
+open GamebookGenerator.Core.Helpers
 
-let introToTwine (startParagraphId: ParagraphId option) (intro: list<Line>) =
-    let header: Twee.FSharp.PassageHeader = {
+let introToTwine (startParagraphId: ParagraphId option) (intro: ParagraphBody) =
+    let header: Twine.Twee.FSharp.PassageHeader = {
         Name = "Start"
         Tags = None
         Metadata = None
     }
-    let body: Twee.FSharp.PassageBody =
+    let body: Twine.SugarCube.FSharp.PassageBody =
         [
-            yield! Paragraph.linesToTwine intro
+            yield! ParagraphBody.toTwine None intro
 
             match startParagraphId with
             | Some startParagraphId ->
@@ -24,13 +23,13 @@ let introToTwine (startParagraphId: ParagraphId option) (intro: list<Line>) =
                 ])
             | None -> ()
         ]
-    let passage: Twee.FSharp.Passage = {
+    let passage: Twine.Twee.FSharp.Passage<_> = {
         Header = header
         Body = body
     }
     passage
 
-let toTwine (document: Document): Twee.FSharp.Document =
+let toTwine (document: Document): Twine.Twee.FSharp.Document<_> =
     let firstParagraph =
         List.tryHead document.Paragraphs
         |> Option.map (fun x -> x.Id)

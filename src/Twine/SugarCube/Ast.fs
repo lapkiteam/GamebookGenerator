@@ -1,5 +1,5 @@
 namespace Twine.SugarCube.FSharp
-open Twee.FSharp
+open Twine.Twee.FSharp
 
 type Link = {
     Text: string
@@ -12,3 +12,5 @@ type Inline =
     | Link of Link
 
 type Line = Inline list
+
+type PassageBody = Line list

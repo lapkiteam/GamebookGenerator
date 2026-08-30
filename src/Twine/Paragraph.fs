@@ -1,29 +1,20 @@
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 [<RequireQualifiedAccess>]
 module GamebookGenerator.Twine.Paragraph
-open GamebookGenerator.Core.Ast
-open Twine
-
-let linesToTwine (lines: Line list) =
-    lines
-    |> List.collect (
-        Line.toTwine
-        >> fun x -> [x; ""]
-    )
+open GamebookGenerator.Core
+open Twine.Twee.FSharp
 
 let toTwine (paragraph: Paragraph) =
-    let header: Twee.FSharp.PassageHeader = {
+    let header: PassageHeader = {
         Name = string paragraph.Id
         Tags = None
         Metadata = None
     }
-    let body: Twee.FSharp.PassageBody =
-        [
-            // paragraph.Title
-            yield! linesToTwine paragraph.Content
-        ]
-    let passage: Twee.FSharp.Passage = {
+    let passage: Passage<_> = {
         Header = header
-        Body = body
+        Body =
+            ParagraphBody.toTwine
+                (Some paragraph.Title)
+                paragraph.Content
     }
     passage

@@ -17,7 +17,7 @@ group Twine
 
     nuget FSharp.Core >= 6 lowest_matching: true
     nuget FSharpMyExt >= 2.0.0-prerelease.11 lowest_matching: true
-    nuget Twee.FSharp >= 0.4 lowest_matching: true
+    nuget Twine.Twee.FSharp >= 0.5 lowest_matching: true
 
 group Tests
     source https://api.nuget.org/v3/index.json
@@ -30,4 +30,4 @@ group Tests
 
     nuget FSharp.Core >= 6 lowest_matching: true
     nuget FSharpMyExt >= 2.0.0-prerelease.11 lowest_matching: true
-    nuget Twee.FSharp >= 0.4 lowest_matching: true
+    nuget Twine.Twee.FSharp >= 0.5 lowest_matching: true
